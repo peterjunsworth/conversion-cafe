@@ -1,6 +1,6 @@
-# Vuegram
+# Conversion Cafe
 
-> A simple social media web app built with Vue.js and Firebase's Cloud Firestore as a way to teach people how to build a real-world app using the two technologies. Follow along with our tutorial, [Building a Real-World Web App With Vue.js and Firebase](http://savvyapps.com/blog/definitive-guide-building-web-app-vuejs-firebase), to learn core Vue.js concepts and build this project.
+> A web app built with Vue.js and Firebase's Cloud Firestore as a way to onboard affiliates and manage bundles
 
 ### Changelog
 *We just released a major update in July 2020!* This release includes the current Vue CLI, async/await instead of promise chaining, and a structure overhaul incorporating updated best practices. The flow remains unchanged with some updates to match the current Firebase SDK. All code for the rewrite can be found in the project's `master` branch, while the old code remains in `original-deprecated` for posterity.

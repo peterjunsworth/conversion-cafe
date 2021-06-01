@@ -4,13 +4,13 @@ import 'firebase/firestore'
 
 // firebase init
 const firebaseConfig = {
-  apiKey: '',
-  authDomain: '',
-  databaseURL: '',
-  projectId: '',
-  storageBucket: '',
-  messagingSenderId: '',
-  appId: ''
+  apiKey: "AIzaSyClApcQl3OCABm2UZQig9lRBJTglk2t2JQ",
+  authDomain: "conversion-cafe.firebaseapp.com",
+  projectId: "conversion-cafe",
+  storageBucket: "conversion-cafe.appspot.com",
+  messagingSenderId: "366104061574",
+  appId: "1:366104061574:web:f532fd6d0f37792b7e5307",
+  measurementId: "G-VX8NPXH1GW"
 }
 firebase.initializeApp(firebaseConfig)
 
