@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import * as fb from '../firebase'
 import router from '../router/index'
+import { merchantsCollection } from '@/firebase'
 
 Vue.use(Vuex)
 
@@ -80,6 +81,7 @@ const store = new Vuex.Store({
     },
     async createPost({ state, commit }, post) {
       // create post in firebase
+      console.log(fb.postsCollection);
       await fb.postsCollection.add({
         createdOn: new Date(),
         content: post.content,
@@ -133,6 +135,30 @@ const store = new Vuex.Store({
           userName: user.name
         })
       })
+    },
+    async createMerchant({ dispatch }, data) {
+      const userId = fb.auth.currentUser.uid
+
+      const merchants = merchantsCollection.where("apiKey", "==", data.apiKey)
+      const merchant = await merchants.get()
+      let merchantId = null
+      merchant.forEach((doc) => {
+        merchantId = doc.id
+      })
+
+      const merchantData = {
+        apiKey: data.apiKey,
+        apiSecret: data.apiSecret,
+        name: data.name,
+        owner: userId
+      }
+
+      if (merchantId !== null) {
+        await fb.merchantsCollection.doc(merchantId).update(merchantData);
+      } else {
+        await fb.merchantsCollection.add(merchantData)
+      }
+      router.push('/')
     }
   }
 })

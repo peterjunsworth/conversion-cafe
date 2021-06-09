@@ -21,7 +21,3 @@ export default {
   }
 }
 </script>
-
-<!-- <script src="/__/firebase/8.6.3/firebase-app.js"></script>
-<script src="/__/firebase/8.6.3/firebase-analytics.js"></script>
-<script src="/__/firebase/init.js"></script> -->

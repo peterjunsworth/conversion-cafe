@@ -3,6 +3,7 @@ header {
   position: relative;
   background: $white;
   box-shadow: 0 0 5px 0 rgba($dark, 0.5);
+  margin-bottom: 40px;
   z-index: 10;
 
   h3 {
@@ -406,4 +407,24 @@ header {
   .button {
     margin-top: 2rem;
   }
+}
+
+.merchantNames {
+  margin-bottom: 50px;
+}
+
+.bundle {
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+}
+.bundle img {
+  display: block;
+  margin: 0 auto;
+}
+.bundle .btn {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
